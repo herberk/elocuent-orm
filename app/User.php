@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace EloquentORM;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
@@ -11,9 +11,13 @@ class User extends Authenticatable
      *
      * @var array
      */
-    protected $fillable = [
-        'name', 'email', 'password',
-    ];
+   protected $fillable = [
+        'name', 
+        'email', 
+        'password',
+        'gender',
+        'biography'
+        ];
 
     /**
      * The attributes excluded from the model's JSON form.
