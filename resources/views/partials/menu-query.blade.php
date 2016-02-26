@@ -34,5 +34,11 @@
                 First Last
             </a>
         </li>
+         </li>
+           <li>
+            <a href="{{ route('paginate') }}">
+                Paginar
+            </a>
+        </li>
     </ul>
 </li>
