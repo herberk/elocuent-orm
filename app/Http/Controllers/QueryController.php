@@ -38,10 +38,18 @@ class QueryController extends Controller
         return view('pages.delete');
     }
     
-     public function eloquentList(){
+     public function eloquentLists(){
         $users = User::orderBy('name','ASC')
                 ->lists('name','id');
             
         return view('query.list', compact('users'));
+    }
+    
+     public function eloquentFirstLast(){
+        $first = User::first();
+         $all = User::all();
+        $last = $all->last();
+            
+        return view('query.first-last', compact('first','last'));
     }
 }

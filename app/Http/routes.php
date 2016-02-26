@@ -35,10 +35,13 @@ Route::delete('/delete/{id}', [
 
 Route::get('/lists', [
     'as' => 'lists',
-    'uses' => 'QueryController@eloquentList'
+    'uses' => 'QueryController@eloquentLists'
 ]);
 
-
+Route::get('/first-last', [
+    'as' => 'first-last',
+    'uses' => 'QueryController@eloquentFirstLast'
+]);
 /*
 |--------------------------------------------------------------------------
 | Application Routes
